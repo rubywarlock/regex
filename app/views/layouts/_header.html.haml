@@ -1,0 +1,23 @@
+%header.navbar.navbar-static-top.bs-docs-nav.header-shadow{:id => "top", :role => "banner", :style => "border:none !important"}
+	%div.container
+		%div.navbar-header
+			%button.navbar-toggle{ :type => "button", "data-toggle" => "collapse", "data-target" => ".bs-navbar-collapse" }
+				%span.sr-onlyToggle navigation
+				%span.icon-bar
+				%span.icon-bar
+				%span.icon-bar
+
+			%a.navbar-brand{ :href => "../", id: "logo"} REGEXP LIBRARY
+
+		%nav.collapse.navbar-collapse.bs-navbar-collapse{ :role => "navigation" }
+			%ul.nav.navbar-nav
+				%li= link_to "Images", images_path
+
+			%ul.nav.navbar-nav.navbar-right
+				-if user_signed_in?
+					%li
+					%li= link_to current_user.email, user_path
+					%li= link_to 'Выйти', destroy_user_session_path, :method => :delete
+				-else
+					%li= link_to 'Войти', new_user_session_path
+					%li= link_to 'Зарегистрироваться', new_user_registration_path

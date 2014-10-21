@@ -1,0 +1,29 @@
+%h4 Вид полученного списка
+
+%p
+	=@list_id
+	%br
+	одна строка в списке содержит
+	=@b1.count
+	=Russian.p(@b1.count,'поле','поля','полей')
+
+=form_for @list, multiple: true do |form|
+	%table{ class: "get-list-table" }
+		%thead
+			%tr
+				%th № поля
+				%th содержание поля
+				%th выбор назначения поля
+		%tbody
+			-@b1.each_with_index do |s,i|
+				%tr
+					%td
+						поле
+						=i+1
+					%td= s
+					%td{:style => "padding-left:5px;"}
+						=fields_for :assignment do |a|
+							=a.select(i, "link" => "link", "name" => "name", "group" => "group")
+		%tfoot
+			%tr
+				%th= form.submit "Создать список", class: "btn btn-primary btn-sm"

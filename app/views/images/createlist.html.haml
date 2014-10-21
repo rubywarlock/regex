@@ -1,0 +1,14 @@
+%table{ class: "get-list-table" }
+	%thead
+		%tr
+			%th № поля
+			%th идентификатор назначения
+			%th соответсвующее значение
+	%tbody
+		-@p.each_with_index do |s,i|
+			%tr
+				%td
+					поле
+					=i+1
+				%td= s[0]
+				%td= s[1]

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html" charset="utf-8">
+  <title>Rg</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render "layouts/header" %>
+
+
+<div class="wrap container-fluid" style="margin-bottom:220px; background:#ffffff">
+  <div class="row-fluid">
+
+    <div class="span6" style="background:#FFF; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; padding-bottom:10px;">
+      <%= yield %>
+	  </div>
+
+	</div>
+</div>
+
+</body>
+</html>

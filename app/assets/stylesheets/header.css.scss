@@ -1,0 +1,23 @@
+.header-shadow{
+	-moz-box-shadow: 0 4px 4px rgba(196, 194, 200, 0.40);
+	-webkit-box-shadow: 0 4px 4px rgba(196, 194, 200, 0.40);
+	box-shadow: 0 4px 4px rgba(196, 194, 200, 0.40);
+}
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.7em;
+	color: #878787;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+	line-height: 1;
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+#logo:hover {
+	color: #5e8ccc;
+	text-decoration: none;
+}

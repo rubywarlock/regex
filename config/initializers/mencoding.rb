@@ -1,0 +1,1 @@
+require './Mencoding/lib/mencoding/core_ext'
